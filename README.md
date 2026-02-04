@@ -1,15 +1,15 @@
-🧺 Lavanderia Automatizada (Console App)
+# Lavanderia Automatizada (Console App)
 
 Este projeto é uma aplicação Console em C# que simula o funcionamento de uma lavanderia automatizada, permitindo que um cliente utilize uma carteira digital para contratar serviços, realizar pagamentos e consultar o histórico de transações.
 
-▶️ Como executar o projeto
+## Como executar o projeto
 Pré-requisitos
 
 .NET SDK instalado (versão 6.0 ou superior)
 
 Visual Studio, Visual Studio Code ou outro editor compatível com C#
 
-Passos para execução
+## Passos para execução
 
 Clone este repositório ou faça o download do código-fonte
 
@@ -28,7 +28,7 @@ dotnet run
 
 Interaja com o menu exibido no console para selecionar os serviços da lavanderia
 
-🛠️ Tecnologias utilizadas
+## Tecnologias utilizadas
 
 C#
 
@@ -38,7 +38,7 @@ xUnit (para testes unitários)
 
 Programação Orientada a Objetos (POO)
 
-💡 Explicação breve da solução
+## Explicação breve da solução
 
 A aplicação foi estruturada utilizando conceitos básicos de POO, separando responsabilidades em classes distintas:
 
@@ -72,11 +72,12 @@ Validam exibição de saldo, pagamento e histórico
 
 O sistema funciona em loop até que o usuário escolha sair, simulando uma experiência simples e interativa no console.
 
-🚀 O que eu faria diferente se tivesse mais tempo
+## O que eu faria diferente se tivesse mais tempo
 
 Persistência de dados (arquivo ou banco de dados)
 
 Evoluiria o projeto para uma API ou aplicação com interface gráfica
 
  
+
 

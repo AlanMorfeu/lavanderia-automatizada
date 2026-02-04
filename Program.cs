@@ -29,33 +29,35 @@
 
 ///////////////////////////////////////////////////////////////////////////  Exixbição interativa Copilot ///////////////////////////////////////////////////////////////////////////
 
-// Após criar manual a base do pragrama para entender o funcionamento, utilizei o GitHub Copilot para criar a parte interativa do programa.
+//Após criar manualmente a base do pragrama para entender o funcionamento, utilizei o GitHub Copilot para criar a parte interativa do programa.
 
 Carteira carteira = new Carteira("Cliente", "0000", 50.00m);
-List<Servicos> servicos = new List<Servicos> 
-{ 
-    new Servicos("Lavagem", 18.90m), 
-    new Servicos("Secagem", 20.90m) 
+List<Servicos> servicos = new List<Servicos>
+{
+    new Servicos("Lavagem", 18.90m),
+    new Servicos("Secagem", 20.90m)
 };
 
 Console.WriteLine($" Bem-vindo {carteira.Nome} à Lavanderia Automatizada!");
 Console.WriteLine("");
 
-carteira.ExibirSaldo(); 
-bool continuar = true; 
-while (continuar) {
+carteira.ExibirSaldo();
+bool continuar = true;
+while (continuar)
+{
     Console.WriteLine($"Saldo: {carteira.ExibirSaldo()}");
     Console.WriteLine("\nEscolha um serviço:");
     for (int i = 0; i < servicos.Count; i++)
-    { 
+    {
         Console.WriteLine($"{i + 1} - {servicos[i].Nome} (R$ {servicos[i].Preco:F2})");
     }
-    
-    if (carteira.ExisteHistorico){
+
+    if (carteira.ExisteHistorico)
+    {
         Console.WriteLine("3 - Histórico");
-    }    
+    }
     Console.WriteLine("0 - Sair");
-    
+
     Console.Write("Opção: ");
     string? opcao = Console.ReadLine();
 
@@ -88,11 +90,8 @@ while (continuar) {
         Console.WriteLine("Opção inválida, tente novamente.");
     }
 
-    
+
 }
-
 Console.WriteLine("\nObrigado por utilizar a lavanderia!");
-
-
 
 

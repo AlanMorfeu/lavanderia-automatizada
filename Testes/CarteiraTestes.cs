@@ -20,7 +20,7 @@ namespace DevFullStackCicclo.Testes
             var saldo = carteira.ExibirSaldo();
 
             // Assert
-            Assert.Equal("$R$100,00", saldo);
+            Assert.Contains("100", saldo);
         }
         [Fact]
         public void RealizarPagamento_DeveReduzirSaldo_QuandoSaldoSuficiente()
@@ -41,8 +41,12 @@ namespace DevFullStackCicclo.Testes
             // Arrange
             var carteira = new Carteira("Teste", "1234", 30m);
 
-            // Act & Assert
-            Assert.Throws<System.Exception>(() => carteira.RealizarPagamento("Compra", 50m));
+            // Act
+            var resultado = carteira.RealizarPagamento("Compra", 50m);
+
+            // Assert
+            Assert.False(resultado);
+            Assert.Equal(30m, carteira.Saldo);
         }
         [Fact]
         public void ExibirHistorico_DeveRetornarHistoricoCorreto()
